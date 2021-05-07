@@ -282,3 +282,18 @@ header .header_nav .hamburger {
     display: block;
   }
 }
+main {
+  background: url("../../../public/img/fondo-pag-speciali.jpg") no-repeat;
+  background-size: cover;
+}
+main .container .cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .container .cards .card {
+  width: calc((100% / 3) - 20px);
+}
+main .container .cards .card img {
+  display: block;
+  width: 100%;
+}

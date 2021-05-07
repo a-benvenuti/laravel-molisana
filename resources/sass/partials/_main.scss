@@ -1,1 +1,14 @@
-
+main{
+    background: url("../../../public/img/fondo-pag-speciali.jpg") no-repeat;
+    background-size: cover;
+    .container{
+        .cards{
+            @include my-display-flex;
+            flex-wrap: wrap;
+            .card{
+                width: calc((100% / 3) - 20px);
+                img{display: block; width: 100%;}
+            }
+        }
+    }
+}
