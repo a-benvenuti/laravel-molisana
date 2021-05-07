@@ -1,6 +1,6 @@
 main{
-    background: url("../../../public/img/fondo-pag-speciali.jpg") no-repeat;
-    background-size: cover;
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("/img/fondo-pag-speciali.jpg");
+    background-size: contain;
     .container{
         .cards{
             @include my-display-flex;
@@ -10,5 +10,15 @@ main{
                 img{display: block; width: 100%;}
             }
         }
+    }
+}
+@media (max-width: $tablet) {
+    main{
+        .container{.cards{.card{width: calc((100% / 2) - 20px);}}}
+    }
+}
+@media (max-width: $phone-wide) {
+    main{
+        .container{.cards{.card{width:100%;}}}
     }
 }

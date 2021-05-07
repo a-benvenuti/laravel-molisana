@@ -283,8 +283,8 @@ header .header_nav .hamburger {
   }
 }
 main {
-  background: url("../../../public/img/fondo-pag-speciali.jpg") no-repeat;
-  background-size: cover;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("/img/fondo-pag-speciali.jpg");
+  background-size: contain;
 }
 main .container .cards {
   display: flex;
@@ -296,4 +296,44 @@ main .container .cards .card {
 main .container .cards .card img {
   display: block;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  main .container .cards .card {
+    width: calc((100% / 2) - 20px);
+  }
+}
+@media (max-width: 480px) {
+  main .container .cards .card {
+    width: 100%;
+  }
+}
+footer {
+  color: #848d9b;
+}
+footer h2 {
+  color: #848d9b;
+}
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .container section {
+  width: calc((100% / 3) - 60px);
+}
+footer .container .ft-pastificio-prodotti li,
+footer .container .ft-chef li {
+  line-height: 30px;
+}
+footer .footer_bottom {
+  height: 100px;
+  width: 100%;
+  background: url("/img/footer-montagne-bottom.jpg") no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  footer .container section {
+    width: 100%;
+  }
 }

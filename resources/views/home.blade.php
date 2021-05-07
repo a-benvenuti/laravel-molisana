@@ -11,31 +11,10 @@
         <title>Molisana</title>
     </head>
     <body>
-        <header>
-            <!-- logo -->
-            <div class="header_logo container pt-30 pb-50">
-                <img src="{{ asset('img/marchio-sito-test.png') }}" alt="logo">
-            </div>
-            <!-- /logo -->
-            <!-- navbar -->
-            <nav class="header_nav">
-                <ul>
-                    <li class="active "><a class="p-20" href="">Home</a></li>
-                    <li><a class="p-20" href="">Prodotti</a></li>
-                    <li><a class="p-20" href="">News</a></li>
-                </ul>
-                <!-- hamburger menu -->
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <!-- /hamburger menu -->
-            </nav>
-            <!-- /navbar -->
-        </header>
-
-        <main>
-            <div class="container">
-                <section class="lunghe">
+        @include('partials.header')
+        <main class="mt-20 mb-40">
+            <div class="container p-20">
+                <section class="lunghe pt-20">
                     <h2>LE LUNGHE</h2>
                     <div class="cards">
                         @foreach ($lunghe as $pasta)
@@ -45,7 +24,7 @@
                         @endforeach  
                     </div>
                 </section>
-                <section class="lunghe">
+                <section class="corte pt-40">
                     <h2>LE CORTE</h2>
                     <div class="cards">
                         @foreach ($corte as $pasta)
@@ -55,7 +34,7 @@
                         @endforeach  
                     </div>
                 </section>
-                <section class="lunghe">
+                <section class="cortissime pt-40">
                     <h2>LE CORTISSIME</h2>
                     <div class="cards">
                         @foreach ($cortissime as $pasta)
@@ -67,6 +46,6 @@
                 </section>
             </div>
         </main>
-        
+        @include('partials.footer')
     </body>
 </html>

@@ -1,0 +1,22 @@
+footer{
+    color: $color-text;
+    h2{color: $color-text;}
+    .container{
+        @include my-display-flex;
+        flex-wrap: wrap;
+        section{width: calc((100% / 3) - 60px);}
+        .ft-pastificio-prodotti,
+        .ft-chef{li{line-height: 30px;}}
+    }
+    .footer_bottom{
+        height: 100px;
+        width: 100%;
+        background: url("/img/footer-montagne-bottom.jpg") no-repeat;
+        background-size: cover;
+    }
+}
+@media (max-width: $tablet) {
+    footer{
+        .container{section{width: 100%;}}
+    }
+}
