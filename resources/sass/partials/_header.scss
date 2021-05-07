@@ -1,0 +1,31 @@
+header{
+    .header_logo{
+        text-align: center;
+        img{width: 200px;}
+    }
+    .header_nav{
+        @include my-display-flex;
+        justify-content: center;
+        ul{
+            @include my-display-flex;
+            justify-content: center;
+            a{color: black; font-size: $font-normal;}
+            .active{a{background-color: $color-secondary;}}
+        }
+        .hamburger{
+            display: none;
+            cursor: pointer;
+            color: $color-primary;
+            font-size: $font-med;
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    header{
+        .header_nav{
+            ul{display: none;}
+            .hamburger{display: block;}
+        }
+    }
+}
