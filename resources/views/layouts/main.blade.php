@@ -19,6 +19,7 @@
             </div>
         </main>
         @include('partials.footer')
+        
         @yield('js')
     </body>
 </html>

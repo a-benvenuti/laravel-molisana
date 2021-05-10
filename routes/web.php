@@ -14,7 +14,7 @@ use PhpParser\Node\Stmt\Foreach_;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     $data = [
         [
             "src" => "https://www.lamolisana.it/wp-content/uploads/2017/06/4-spaghetto-quadrato-bucato-m.jpg",
@@ -155,9 +155,9 @@ Route::get('/', function () {
         'corte' => $corta,
         'cortissime' => $cortissima
     ]);
-});
+})->name('homepage');
 
 
 Route::get('/news', function() {
     return view('news');
-});
+})->name('news');

@@ -13,4 +13,5 @@
 <style>
     main{background: none;}
 </style>
+{{-- oppure fare un link a un altro file scss  --}}
 @endsection
