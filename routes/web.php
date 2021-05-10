@@ -156,3 +156,8 @@ Route::get('/', function () {
         'cortissime' => $cortissima
     ]);
 });
+
+
+Route::get('/news', function() {
+    return view('news');
+});

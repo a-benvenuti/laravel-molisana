@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('pageTitle')
+    La Molisana | Home
+@endsection
+
 @section('main')
 
 <section class="lunghe pt-20">
