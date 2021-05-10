@@ -6,14 +6,13 @@
 
 @section('main')
 <div class="product">
-    <a href=""><i class="fas fa-chevron-left"></i></a>
-    
+    <a href="{{route('prodotti', ['id' => $pasta['id']-1])}}"><i class="fas fa-chevron-left"></i></a>
     <h1>{{$pasta['titolo']}}</h1>
     <img src="{{$pasta['src-h']}}">
     <img src="{{$pasta['src-p']}}" alt="{{$pasta['titolo']}}">
     <p>{!! $pasta['descrizione'] !!}</p>
 
-    <a href=""><i class="fas fa-chevron-right"></i></a>
+    <a href="{{route('prodotti', ['id' => $pasta['id']+1])}}"><i class="fas fa-chevron-right"></i></a>
 </div>
 
 @endsection

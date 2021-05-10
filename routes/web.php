@@ -43,21 +43,24 @@ Route::get('/news', function () {
 
 Route::get('prodotti{id}', function ($id) {
     $data = config('paste');
-    if($id >= count($data)){
-        abort(404);
+    // if($id > count($data)){
+    //     abort(404);
+    // }
+
+    $pasta = null;
+    if ($id > count($data)) {
+        $pasta = $data[0];
+    }if ($id <= 0) {
+        $pasta = $data[11];
+    } else {
+        foreach ($data as $item) {
+            if ($item['id'] == $id) {
+                $pasta = $item;
+            }
+        }
     }
 
-    $pasta = $data[$id];
 
-    $next = ($id + 1);
-    if ($next >= count($data)) {
-        $next = 0;
-    }
-    $prev = ($id - 1);
-    if ($prev < 0) {
-        $prev = (count($data) -1);
-    }
-    // dd($next, $prev);
 
     return view('prodotti', [
         'pasta'=> $pasta,
