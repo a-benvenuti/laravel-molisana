@@ -43,22 +43,22 @@ Route::get('/news', function () {
 
 Route::get('prodotti{id}', function ($id) {
     $data = config('paste');
-    // if($id > count($data)){
-    //     abort(404);
-    // }
-
-    $pasta = null;
-    if ($id > count($data)) {
-        $pasta = $data[0];
-    }if ($id <= 0) {
-        $pasta = $data[11];
-    } else {
-        foreach ($data as $item) {
-            if ($item['id'] == $id) {
-                $pasta = $item;
-            }
-        }
+    if($id >= count($data)){
+        abort(404);
     }
+
+    $pasta = $data[$id];
+    // if ($id > count($data)) {
+    //     $pasta = $data[0];
+    // }if ($id <= 0) {
+    //     $pasta = $data[11];
+    // } else {
+    //     foreach ($data as $item) {
+    //         if ($item['id'] == $id) {
+    //             $pasta = $item;
+    //         }
+    //     }
+    // }
 
 
 

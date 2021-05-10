@@ -8,7 +8,7 @@
     <nav class="header_nav">
         <ul>
             <li class="{{Route::getCurrentRoute()->getName() == 'homepage' ? 'active' : ''}}"><a class="p-20" href="{{route('homepage')}}">Home</a></li>
-            <li class="{{Route::getCurrentRoute()->getName() == 'prodotti' ? 'active' : ''}}"><a class="p-20" href="{{route('prodotti', ['id' => 1])}}">Prodotti</a></li>
+            <li class="{{Route::getCurrentRoute()->getName() == 'prodotti' ? 'active' : ''}}"><a class="p-20" href="{{route('prodotti', ['id' => 0])}}">Prodotti</a></li>
             <li class="{{Route::getCurrentRoute()->getName() == 'news' ? 'active' : ''}}"><a class="p-20" href="{{route('news')}}">News</a></li>
         </ul>
         <!-- hamburger menu -->
