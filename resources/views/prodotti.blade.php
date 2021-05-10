@@ -7,12 +7,12 @@
 @section('main')
 <div class="product">
     {{-- <a href="{{route('prodotti', ['id' => $pasta['id']-1])}}"><i class="fas fa-chevron-left"></i></a> --}}
-    <a href="{{route('prodotti', ['id' => 0])}}"><i class="fas fa-chevron-left"></i></a>
+    <a href="{{route('prodotti', ['id' => $prev])}}"><i class="fas fa-chevron-left"></i></a>
     <h1>{{$pasta['titolo']}}</h1>
     <img src="{{$pasta['src-h']}}">
     <img src="{{$pasta['src-p']}}" alt="{{$pasta['titolo']}}">
     <p>{!! $pasta['descrizione'] !!}</p>
-    <a href="{{route('prodotti', ['id' => 11])}}"><i class="fas fa-chevron-right"></i></a>
+    <a href="{{route('prodotti', ['id' => $next])}}"><i class="fas fa-chevron-right"></i></a>
     {{-- <a href="{{route('prodotti', ['id' => $pasta['id']+1])}}"><i class="fas fa-chevron-right"></i></a> --}}
 </div>
 

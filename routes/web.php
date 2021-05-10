@@ -14,7 +14,7 @@ use PhpParser\Node\Stmt\Foreach_;
 |
 */
 
-Route::get('/home', function () {
+Route::get('/', function () {
     $data = config('paste');
     $lunga = [];
     $corta = [];
@@ -48,6 +48,8 @@ Route::get('prodotti{id}', function ($id) {
     }
 
     $pasta = $data[$id];
+    $next = ($id == (count($data) - 1) ? 0 : $id + 1);
+    $prev = ($id == 0 ? (count($data) - 1) : $id - 1);
     // if ($id > count($data)) {
     //     $pasta = $data[0];
     // }if ($id <= 0) {
@@ -59,10 +61,9 @@ Route::get('prodotti{id}', function ($id) {
     //         }
     //     }
     // }
-
-
-
     return view('prodotti', [
         'pasta'=> $pasta,
+        'next' => $next,
+        'prev' => $prev
     ]);
 })->where('id', '[0-9]+')->name('prodotti');
