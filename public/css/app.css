@@ -283,6 +283,7 @@ header .header_nav .hamburger {
   }
 }
 main {
+  position: relative;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("/img/fondo-pag-speciali.jpg");
   background-size: contain;
 }
@@ -297,6 +298,28 @@ main .container .cards .card img {
   display: block;
   width: 100%;
 }
+main .product .fas {
+  font-size: 40px;
+  color: white;
+  padding: 20px 10px;
+  border-radius: 5px;
+  background-color: #b2e5fc;
+  position: absolute;
+  top: calc(50% - 40px);
+}
+main .product .fa-chevron-left {
+  left: 0;
+  margin-right: 20px;
+}
+main .product .fa-chevron-right {
+  right: 0;
+}
+main .product h1 {
+  text-align: center;
+}
+main .product img {
+  width: 100%;
+}
 
 @media (max-width: 768px) {
   main .container .cards .card {
@@ -306,6 +329,9 @@ main .container .cards .card img {
 @media (max-width: 480px) {
   main .container .cards .card {
     width: 100%;
+  }
+  main .product p {
+    padding: 0px 30px;
   }
 }
 footer {
