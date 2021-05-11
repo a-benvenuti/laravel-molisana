@@ -41,7 +41,7 @@ Route::get('/news', function () {
     return view('news');
 })->name('news');
 
-Route::get('prodotti{id}', function ($id) {
+Route::get('/prodotti/{id}', function ($id) {
     $data = config('paste');
     if($id >= count($data)){
         abort(404);
